@@ -3,6 +3,8 @@ const path=require('path')
 const hbs=require('hbs')
 const geo=require('./utils/geocode')
 
+const port=process.env.PORT || 3000
+
 // console.log(__filename)
 // console.log(__dirname)
 // console.log(path.join(__dirname,'/public'))
@@ -114,6 +116,6 @@ app.get('*',(req,res)=>{
     })
 })
 
-app.listen(3000,()=>{
-    console.log('Server is up Running!!')
+app.listen(port,()=>{
+    console.log('Server is up Running!! '+port)
 })
