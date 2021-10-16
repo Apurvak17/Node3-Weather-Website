@@ -16,7 +16,7 @@ const geolocation=(address,callback)=>{
     {
         callback(undefined,{Place: body.features[0].place_name,
             Longitude: body.features[0].center[0],
-            Latitude: body.features[0].center[1]})
+            Latitude: body.features[0].center[1]+" Here is all your values"})
     }
     })
 }
@@ -34,7 +34,7 @@ const forecast=(a,b,callback)=>{
         }
         else
         {
-            callback(undefined,body.current.weather_descriptions[0])
+            callback(undefined,body.current.weather_descriptions[0]+" Feels like:"+body.current.weather_descriptions[8])
         }
     })
 }
